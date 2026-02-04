@@ -552,11 +552,11 @@ const Valentine = () => {
                 <div className="love-items">
                   <div className="love-item">
                     <span className="item-emoji">🌸</span>
-                    <p>How you steal my hoodies and somehow make them look better than I ever could</p>
+                    <p>How you love wearing my clothes and somehow make them look better than I ever could</p>
                   </div>
                   <div className="love-item">
                     <span className="item-emoji">✨</span>
-                    <p>The way you get competitive over board games (sorry for being a sore loser sometimes!)</p>
+                    <p>The way you feed me first always</p>
                   </div>
                   <div className="love-item">
                     <span className="item-emoji">🌙</span>
@@ -582,7 +582,7 @@ const Valentine = () => {
                 <div className="promises-grid">
                   <div className="promise-card">
                     <div className="promise-icon">🤝</div>
-                    <p>I promise to always split the last slice of pizza (okay, maybe not always)</p>
+                    <p>I will never ever leave you, you are my safe place</p>
                   </div>
                   <div className="promise-card">
                     <div className="promise-icon">😂</div>
