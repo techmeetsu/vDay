@@ -55,10 +55,10 @@ const Valentine = () => {
     // Create particles
     createParticles();
     createFloatingHearts();
-    
+
     // Scroll to top on initial page load
     window.scrollTo(0, 0);
-    
+
     // Landing scene animation (only if not on password screen)
     if (currentScene === 'landing') {
       setTimeout(() => {
@@ -73,7 +73,7 @@ const Valentine = () => {
   const createParticles = () => {
     const container = document.getElementById('particles');
     if (!container) return;
-    
+
     for (let i = 0; i < 30; i++) {
       const particle = document.createElement('div');
       particle.className = 'particle';
@@ -88,7 +88,7 @@ const Valentine = () => {
   const createFloatingHearts = () => {
     const container = document.getElementById('floatingHearts');
     if (!container) return;
-    
+
     setInterval(() => {
       const heart = document.createElement('div');
       heart.className = 'heart';
@@ -96,7 +96,7 @@ const Valentine = () => {
       heart.style.left = Math.random() * 100 + '%';
       heart.style.animationDuration = (Math.random() * 4 + 6) + 's';
       container.appendChild(heart);
-      
+
       setTimeout(() => heart.remove(), 10000);
     }, 1000);
   };
@@ -104,7 +104,7 @@ const Valentine = () => {
   const createRain = () => {
     const container = document.getElementById('rain');
     if (!container) return;
-    
+
     for (let i = 0; i < 100; i++) {
       const drop = document.createElement('div');
       drop.className = 'raindrop';
@@ -118,9 +118,9 @@ const Valentine = () => {
   const createConfetti = () => {
     const container = document.getElementById('confettiContainer');
     if (!container) return;
-    
+
     const colors = ['#FF6B9D', '#FFD700', '#FF69B4', '#FFA500', '#FF1493', '#FFB6C1'];
-    
+
     for (let i = 0; i < 150; i++) {
       const confetti = document.createElement('div');
       confetti.className = 'confetti';
@@ -159,11 +159,11 @@ const Valentine = () => {
     const correctPassword = 'iloveyoumuskaanuzairkhanforlife29';
     const trimmedPassword = password.trim().toLowerCase();
     const correctLower = correctPassword.toLowerCase();
-    
+
     console.log('Entered:', trimmedPassword);
     console.log('Correct:', correctLower);
     console.log('Match:', trimmedPassword === correctLower);
-    
+
     if (trimmedPassword === correctLower) {
       setPasswordError('');
       setCurrentScene('landing');
@@ -291,17 +291,17 @@ const Valentine = () => {
                   <div className="lock-glow"></div>
                   <div className="lock-icon">🔒</div>
                 </div>
-                
+
                 <h1 className="password-heading">
-                  Something Special <br/>
+                  Something Special <br />
                   <span className="for-you">For Muskaan</span>
                 </h1>
-                
+
                 <p className="password-description">
-                  A secret message awaits you...<br/>
+                  A secret message awaits you...<br />
                   Enter the password to unlock 💕
                 </p>
-                
+
                 <form onSubmit={handlePasswordSubmit} className="password-form-elegant">
                   <div className="input-wrapper">
                     <input
@@ -315,14 +315,14 @@ const Valentine = () => {
                     />
                     <div className="input-underline"></div>
                   </div>
-                  
+
                   {passwordError && (
                     <div className="error-message">
                       <span className="error-icon">❌</span>
                       <p>{passwordError}</p>
                     </div>
                   )}
-                  
+
                   <button type="submit" className="unlock-button">
                     <span className="button-text">Unlock My Surprise</span>
                     <span className="button-icon">💖</span>
@@ -369,16 +369,16 @@ const Valentine = () => {
           <div className="sad-content">
             <div className="crying-emoji">😢</div>
             <h2>This could've been us...</h2>
-            
+
             <div className="future-lost">
-              <p style={{fontSize: '1.3rem', marginBottom: '30px', opacity: 0.9}}>Some futures disappear when we say no...</p>
-              
+              <p style={{ fontSize: '1.3rem', marginBottom: '30px', opacity: 0.9 }}>Some futures disappear when we say no...</p>
+
               <div className="future-grid">
                 <div className="future-card">
                   {/* Real photo - Adventures Together */}
                   <div className="placeholder future-photo">
-                    <img 
-                      src="https://customer-assets.emergentagent.com/job_valentine-proposal-40/artifacts/5vjor97u_WhatsApp%20Image%202026-02-03%20at%2015.29.38%20%282%29.jpeg" 
+                    <img
+                      src="https://customer-assets.emergentagent.com/job_valentine-proposal-40/artifacts/5vjor97u_WhatsApp%20Image%202026-02-03%20at%2015.29.38%20%282%29.jpeg"
                       alt="Our future adventures"
                       className="future-aged-image"
                     />
@@ -386,12 +386,12 @@ const Valentine = () => {
                   <h3>Adventures Together</h3>
                   <p>All the places we could have explored...</p>
                 </div>
-                
+
                 <div className="future-card">
                   {/* Real photo - Endless Laughter */}
                   <div className="placeholder future-photo">
-                    <img 
-                      src="https://customer-assets.emergentagent.com/job_valentine-proposal-40/artifacts/dho6ec1u_WhatsApp%20Image%202026-02-03%20at%2015.29.38%20%281%29.jpeg" 
+                    <img
+                      src="https://customer-assets.emergentagent.com/job_valentine-proposal-40/artifacts/dho6ec1u_WhatsApp%20Image%202026-02-03%20at%2015.29.38%20%281%29.jpeg"
                       alt="Our laughter and joy"
                       className="future-aged-image"
                     />
@@ -399,12 +399,12 @@ const Valentine = () => {
                   <h3>Endless Laughter</h3>
                   <p>All the moments we could have shared...</p>
                 </div>
-                
+
                 <div className="future-card">
                   {/* Real photo - Celebrations */}
                   <div className="placeholder future-photo">
-                    <img 
-                      src="https://customer-assets.emergentagent.com/job_valentine-proposal-40/artifacts/byowzwwk_WhatsApp%20Image%202026-02-03%20at%2015.29.38.jpeg" 
+                    <img
+                      src="https://customer-assets.emergentagent.com/job_valentine-proposal-40/artifacts/byowzwwk_WhatsApp%20Image%202026-02-03%20at%2015.29.38.jpeg"
                       alt="Our celebrations"
                       className="future-aged-image"
                     />
@@ -415,7 +415,7 @@ const Valentine = () => {
               </div>
             </div>
 
-            <p style={{fontSize: '1.4rem', marginTop: '50px', color: '#FFB6C1'}}>You can still change your mind, Muskaan... 🥺</p>
+            <p style={{ fontSize: '1.4rem', marginTop: '50px', color: '#FFB6C1' }}>You can still change your mind, Muskaan... 🥺</p>
             <button className="reconsider-btn" onClick={handleReconsider}>💖 Reconsider?</button>
           </div>
         </div>
@@ -428,10 +428,10 @@ const Valentine = () => {
           <div className="happy-content">
             <div className="celebration-emoji">💃🕺</div>
             <h2>YAYYY!! We chose this future ❤️</h2>
-            
+
             <div className="timeline">
-              <h3 style={{fontSize: '2rem', marginBottom: '20px', color: 'var(--deep-rose)'}}>Our Beautiful Future Together</h3>
-              
+              <h3 style={{ fontSize: '2rem', marginBottom: '20px', color: 'var(--deep-rose)' }}>Our Beautiful Future Together</h3>
+
               <div className="timeline-grid">
                 <div className="timeline-card">
                   {/* Animated icon instead of emoji */}
@@ -441,7 +441,7 @@ const Valentine = () => {
                   <h3>Adventures & Travel</h3>
                   <p>Exploring new cities, trying street food, getting lost and finding our way back together</p>
                 </div>
-                
+
                 <div className="timeline-card">
                   <div className="placeholder timeline-animated">
                     <div className="animated-moon">🌙</div>
@@ -449,7 +449,7 @@ const Valentine = () => {
                   <h3>Late-Night Talks</h3>
                   <p>Deep conversations at 2 AM, sharing our dreams, fears, and everything in between</p>
                 </div>
-                
+
                 <div className="timeline-card">
                   <div className="placeholder timeline-animated">
                     <div className="animated-home">🏡</div>
@@ -502,10 +502,10 @@ const Valentine = () => {
 
             <div className="final-message" id="thankYouSection">
               <h3>Thank you for choosing us, Muskaan ❤️</h3>
-              
+
               {/* Video of us */}
               <div className="video-container">
-                <video 
+                <video
                   className="couple-video"
                   src="https://customer-assets.emergentagent.com/job_valentine-proposal-40/artifacts/dvvmrp4i_WhatsApp%20Video%202026-02-03%20at%2016.04.02.mp4"
                   muted
@@ -542,7 +542,7 @@ const Valentine = () => {
                   Three years ago, I had no idea that choosing you would be the best decision of my life.
                   We've laughed until we cried, had our share of disagreements (and I'm sorry for the times I was stubborn),
                   learned from each other's quirks, and somehow fallen even MORE in love with each passing day.
-                  You're not just my girlfriend - you're my partner, my best friend, my favorite person, and the 
+                  You're not just my girlfriend - you're my partner, my best friend, my favorite person, and the
                   reason I look forward to tomorrow. I'm grateful for your patience with me every single day.
                 </p>
               </div>
@@ -610,10 +610,10 @@ const Valentine = () => {
               <div className="letter-section">
                 <h3>What Being Your Valentine STILL Means After 3 Years</h3>
                 <p>
-                  It means choosing you every single day, not because I have to, but because I genuinely 
-                  can't imagine doing life with anyone else. It means being your biggest fan, your safe 
-                  space, your midnight snack partner, and yes, still getting butterflies when you walk 
-                  into a room. Three years in, and you still make my heart race. That's not luck, 
+                  It means choosing you every single day, not because I have to, but because I genuinely
+                  can't imagine doing life with anyone else. It means being your biggest fan, your safe
+                  space, your midnight snack partner, and yes, still getting butterflies when you walk
+                  into a room. Three years in, and you still make my heart race. That's not luck,
                   that's us. 💕
                 </p>
               </div>
@@ -621,10 +621,10 @@ const Valentine = () => {
               <div className="letter-section special-section">
                 <h3>Ready for More Adventures?</h3>
                 <p className="special-text">
-                  We've already created so many incredible memories together. But here's the thing, Muskaan - 
-                  I don't want this to end. I want more late-night talks, more inside jokes that make no sense 
-                  to anyone else, more adventures (big and small), and definitely more of whatever this magic 
-                  is between us. So yeah, I'm asking you to be my Valentine... again. Because every day with 
+                  We've already created so many incredible memories together. But here's the thing, Muskaan -
+                  I don't want this to end. I want more late-night talks, more inside jokes that make no sense
+                  to anyone else, more adventures (big and small), and definitely more of whatever this magic
+                  is between us. So yeah, I'm asking you to be my Valentine... again. Because every day with
                   you deserves to be celebrated. ❤️
                 </p>
                 <div className="signature">
@@ -661,7 +661,7 @@ const Valentine = () => {
           <button className="back-button" onClick={() => setCurrentScene('love-letter')}>
             ← Back to Letter
           </button>
-          
+
           <div className="reasons-content">
             <div className="reasons-header">
               <h2 className="typing-text">50 Reasons Why I Love You, Muskaan</h2>
@@ -670,10 +670,10 @@ const Valentine = () => {
 
             <div className="reasons-grid">
               {reasons.map((reason, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="reason-card"
-                  style={{animationDelay: `${index * 0.05}s`}}
+                  style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   <div className="reason-number">{index + 1}</div>
                   <p className="reason-text">{reason}</p>
@@ -702,13 +702,13 @@ const Valentine = () => {
           <button className="back-button" onClick={() => setCurrentScene('love-letter')}>
             ← Back to Letter
           </button>
-          
+
           <div className="planner-content">
             <h2 className="planner-title">Our Future Date Ideas 💕</h2>
             <p className="planner-subtitle">Pick one and let's make it happen!</p>
 
             <div className="dates-grid">
-              <div 
+              <div
                 className={`date-card ${selectedDate === 1 ? 'selected' : ''}`}
                 onClick={() => setSelectedDate(1)}
               >
@@ -718,7 +718,7 @@ const Valentine = () => {
                 <div className="date-vibe">Romantic & Peaceful</div>
               </div>
 
-              <div 
+              <div
                 className={`date-card ${selectedDate === 2 ? 'selected' : ''}`}
                 onClick={() => setSelectedDate(2)}
               >
@@ -728,7 +728,7 @@ const Valentine = () => {
                 <div className="date-vibe">Fun & Cozy</div>
               </div>
 
-              <div 
+              <div
                 className={`date-card ${selectedDate === 3 ? 'selected' : ''}`}
                 onClick={() => setSelectedDate(3)}
               >
@@ -738,7 +738,7 @@ const Valentine = () => {
                 <div className="date-vibe">Creative & Playful</div>
               </div>
 
-              <div 
+              <div
                 className={`date-card ${selectedDate === 4 ? 'selected' : ''}`}
                 onClick={() => setSelectedDate(4)}
               >
@@ -748,7 +748,7 @@ const Valentine = () => {
                 <div className="date-vibe">Dreamy & Intimate</div>
               </div>
 
-              <div 
+              <div
                 className={`date-card ${selectedDate === 5 ? 'selected' : ''}`}
                 onClick={() => setSelectedDate(5)}
               >
@@ -758,7 +758,7 @@ const Valentine = () => {
                 <div className="date-vibe">Sophisticated & Inspiring</div>
               </div>
 
-              <div 
+              <div
                 className={`date-card ${selectedDate === 6 ? 'selected' : ''}`}
                 onClick={() => setSelectedDate(6)}
               >
@@ -768,7 +768,7 @@ const Valentine = () => {
                 <div className="date-vibe">Refreshing & Adventurous</div>
               </div>
 
-              <div 
+              <div
                 className={`date-card ${selectedDate === 7 ? 'selected' : ''}`}
                 onClick={() => setSelectedDate(7)}
               >
@@ -778,7 +778,7 @@ const Valentine = () => {
                 <div className="date-vibe">Playful & Competitive</div>
               </div>
 
-              <div 
+              <div
                 className={`date-card ${selectedDate === 8 ? 'selected' : ''}`}
                 onClick={() => setSelectedDate(8)}
               >
@@ -788,7 +788,7 @@ const Valentine = () => {
                 <div className="date-vibe">Relaxed & Thoughtful</div>
               </div>
 
-              <div 
+              <div
                 className={`date-card ${selectedDate === 9 ? 'selected' : ''}`}
                 onClick={() => setSelectedDate(9)}
               >
@@ -798,7 +798,7 @@ const Valentine = () => {
                 <div className="date-vibe">Exciting & Unpredictable</div>
               </div>
 
-              <div 
+              <div
                 className={`date-card ${selectedDate === 10 ? 'selected' : ''}`}
                 onClick={() => setSelectedDate(10)}
               >
@@ -808,7 +808,7 @@ const Valentine = () => {
                 <div className="date-vibe">Delicious & Adventurous</div>
               </div>
 
-              <div 
+              <div
                 className={`date-card ${selectedDate === 11 ? 'selected' : ''}`}
                 onClick={() => setSelectedDate(11)}
               >
@@ -818,7 +818,7 @@ const Valentine = () => {
                 <div className="date-vibe">Adorable & Cozy</div>
               </div>
 
-              <div 
+              <div
                 className={`date-card ${selectedDate === 12 ? 'selected' : ''}`}
                 onClick={() => setSelectedDate(12)}
               >
@@ -828,7 +828,7 @@ const Valentine = () => {
                 <div className="date-vibe">Sunny & Relaxing</div>
               </div>
 
-              <div 
+              <div
                 className={`date-card ${selectedDate === 13 ? 'selected' : ''}`}
                 onClick={() => setSelectedDate(13)}
               >
@@ -838,7 +838,7 @@ const Valentine = () => {
                 <div className="date-vibe">Adventurous & Breathtaking</div>
               </div>
 
-              <div 
+              <div
                 className={`date-card ${selectedDate === 14 ? 'selected' : ''}`}
                 onClick={() => setSelectedDate(14)}
               >
@@ -873,7 +873,7 @@ const Valentine = () => {
           <button className="back-button" onClick={() => setCurrentScene('love-letter')}>
             ← Back to Letter
           </button>
-          
+
           <div className="gallery-content">
             <h2 className="gallery-title">Our Memory Gallery 📸</h2>
             <p className="gallery-subtitle">Every moment with you is worth remembering</p>
@@ -882,7 +882,7 @@ const Valentine = () => {
               {/* Video 1 - Our First Adventure */}
               <div className="gallery-item">
                 <div className="gallery-video-wrapper">
-                  <video 
+                  <video
                     className="gallery-video"
                     src="https://customer-assets.emergentagent.com/job_valentine-proposal-40/artifacts/59khez99_1.mp4"
                     muted
@@ -899,7 +899,7 @@ const Valentine = () => {
               {/* Video from earlier - Celebrating Together */}
               <div className="gallery-item">
                 <div className="gallery-video-wrapper">
-                  <video 
+                  <video
                     className="gallery-video"
                     src="https://customer-assets.emergentagent.com/job_valentine-proposal-40/artifacts/oa6kjuyn_WhatsApp%20Video%202026-02-03%20at%2016.25.52.mp4"
                     muted
@@ -916,7 +916,7 @@ const Valentine = () => {
               {/* Video 2 - Special Moment */}
               <div className="gallery-item">
                 <div className="gallery-video-wrapper">
-                  <video 
+                  <video
                     className="gallery-video"
                     src="https://customer-assets.emergentagent.com/job_valentine-proposal-40/artifacts/v7kalmgc_2.mp4"
                     muted
@@ -933,7 +933,7 @@ const Valentine = () => {
               {/* Video 3 - Making Memories */}
               <div className="gallery-item">
                 <div className="gallery-video-wrapper">
-                  <video 
+                  <video
                     className="gallery-video"
                     src="https://customer-assets.emergentagent.com/job_valentine-proposal-40/artifacts/n0n8shvd_3.mp4"
                     muted
@@ -950,7 +950,7 @@ const Valentine = () => {
               {/* Video 4 - Happy Times */}
               <div className="gallery-item">
                 <div className="gallery-video-wrapper">
-                  <video 
+                  <video
                     className="gallery-video"
                     src="https://customer-assets.emergentagent.com/job_valentine-proposal-40/artifacts/o6bq8gnv_4.mp4"
                     muted
@@ -967,7 +967,7 @@ const Valentine = () => {
               {/* Video 5 - Just Us */}
               <div className="gallery-item">
                 <div className="gallery-video-wrapper">
-                  <video 
+                  <video
                     className="gallery-video"
                     src="https://customer-assets.emergentagent.com/job_valentine-proposal-40/artifacts/7iiv5cr0_5.mp4"
                     muted
